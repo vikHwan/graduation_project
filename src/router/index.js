@@ -1,17 +1,15 @@
 import { createRouter ,createWebHistory} from 'vue-router'
-import HomeView from "@/views/homeView.vue";
 
-import MapHomeView from "@/views/mapHomeView.vue";
-import OL_ESRI from '@/views/OL_ESRI.vue'
+
 const routes = [
   {
     path:'/',
-    component:HomeView
+    component:()=>import('../views/LoginView.vue')
   },
   {
     name:'mapHomeView',
     path:'/map',
-    component:MapHomeView
+    component:()=>import('../views/arcRest.vue')
   },
   {
     name:'blog',
@@ -26,8 +24,21 @@ const routes = [
   {
     name: 'esriMap',
     path: '/esriMap',
-    component: OL_ESRI
-  }
+    component: ()=>import('../views/OL_ESRI.vue')
+  },
+  {
+    name: 'selfArcWms',
+    path: '/selfArcWms',
+    component: ()=>import('../views/selfArcWMS.vue'),
+    children:[
+      {
+        name:'bottomControl',
+        path: '/bottomControl',
+        component:()=>import('../components/bottomControl.vue')
+      }
+    ]
+  },
+
 ]
 
 
