@@ -108,12 +108,12 @@ function signUp(){
 
 <style scoped lang="less">
 #big-bg{
-  width: 198vh;
-  height: 100vh;
+  width: 1920px;
+  height: 960px;
   background-image: url("src/assets/1.jpg");
   #header{
-    height: 30vh;
-    width: 100vh;
+    height: 320px;
+    width: 1920px;
     margin: auto;
     h1{
       color: white;
@@ -122,8 +122,8 @@ function signUp(){
     }
   }
   #main{
-    height: 70%;
-    width: 80%;
+    height: 640px;
+    width: 1580px;
     overflow: hidden;
     border-radius: 24px 24px 0 0 ;
     margin: auto;
@@ -188,14 +188,14 @@ function signUp(){
       }
       button{
         //margin-left: 30px;
-        width: 200px;
-        height: 50px;
+        width: 20%;
+        height: 10%;
         border-radius: 24px;
       }
     }
     #m_sign{
       position: absolute;
-      margin-left: 765px;
+      margin-left: 50%;
       width: 50%;
       height: 100%;
       padding-left: 75px;
